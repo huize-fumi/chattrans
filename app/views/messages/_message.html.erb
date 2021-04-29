@@ -1,0 +1,24 @@
+<div class="main_bar_middle_top">
+    <div class = "main-left_time">
+      <div class="message-date">
+        <!-- 投稿した時刻を出力する -->
+        <%= l message.created_at %>
+      </div>
+      <div class="message-user">
+        <!-- 投稿したユーザー名情報を出力する -->
+        <%= message.user.name %>
+      </div>
+    </div>
+    <div class="message-upper">
+
+    </div>
+    <div class="message">
+      <div class="message-content">
+        <!-- 投稿したメッセージ内容を記述する -->
+        <%= message.content %><br />
+        <%=link_to " (#{t('application.application.translation')}) "%><%= message.comment %>
+      </div>
+      <%= image_tag message.image.variant(resize: '200x200'), class: 'message-image' if message.image.attached? %>
+    </div>
+
+</div>

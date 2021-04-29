@@ -1,0 +1,35 @@
+<div class="side_bar_top">
+</div>
+
+<div class="side_bar_down">
+  <div class="chat-room">
+   
+    <div class="chat-room_sub_left">
+      <div class="chat-room-sub_top_left">
+        <%= link_to t('application.application.post')%>
+      </div>
+      <div class="chat-room_sub_left_post">
+        <% @room.users.each do |user| %>
+          <div class="chat-room_sub_left_post">
+            <%= user.name %>
+          </div>
+        <% end %>       
+      </div>
+    </div>
+
+    <div class="chat-room_sub_right">
+      <div class="chat-room-sub_top_right">    
+        <%=link_to t('application.application.name')%>
+      </div>
+      <div class="chat-room_sub_right_post">      
+        <% @room.users.each do |user| %>
+          <div class="chat-room_sub_right_post">
+            <%= user.post%>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div> 
+
+

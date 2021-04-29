@@ -1,0 +1,23 @@
+<div class="rooms-index">
+  <div class="rooms-index-middle">
+    <div class="rooms-index-middle_list">
+      <%= link_to t('application.application.chat_room_list')%>
+    </h3>
+  </div>
+  <div class="room-index-lower">
+    <% @rooms.each do |room| %>
+      <div class="room-index-lower_box">
+        <%= link_to room_messages_path(room) do%>
+          <div class="room-index-lower_room">
+
+            <div class="room-info">
+              <%= "件名：" "#{room.title}" %>
+            </div>
+          </div>
+        <%end%>
+      </div>
+      <div class="room-index-lower_space">
+      </div>
+    <% end %>
+  </div>
+</div>

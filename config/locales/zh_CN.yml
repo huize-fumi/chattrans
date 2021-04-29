@@ -1,0 +1,4 @@
+zh_CN:
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"

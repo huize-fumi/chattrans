@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProtoSpace</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="5-6.css">
+
+  </head>
+
+  <body>
+    <div id="particles-js"></div>
+      <div id="wrapper">
+        <header class="header">
+          <div class="inner">
+            <div class="nav">
+              <div class="nav__left">
+                <%= link_to image_tag("logo.jpg", class: :logo), root_path %>
+              </div>
+              <div class="nav_center">
+                <nav>
+                  <ul>
+                    <li>
+                      <div class="nav_center_top">
+                        <div class="nav_center_ja">
+                          <div class="nav_image" >
+                            <%= link_to('日本語',{:locale => 'ja'} ,{class: 'nav_letter'}) %>
+                          </div>
+                        </div>
+                        <div class="nav_center_en">
+                          <div class="nav_image" >
+                            <%= link_to('English',{:locale => 'en'} ,{class: 'nav_letter'}) %>
+                          </div>
+                        </div>
+                        <div class="nav_center_ch">
+                          <div class="nav_image" >
+                            <%= link_to('中国語',{:locale => 'zh_CN'} ,{class: 'nav_letter'}) %>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="nav_right">
+                <div class="nav_right_sub">
+                  <% if user_signed_in? %>
+                      <%= link_to t('application.application.log_out'), destroy_user_session_path, method: :delete,class: :nav__logout %>
+                      <%= link_to t('application.application.chat_room'),new_room_path, method: :get, class: :nav__btn %>
+                      <div class=nav_right_current_user>
+                        <%= t('application.application.log_in')%><%= "："%>
+                        <%= link_to current_user.name, class:'nav_right_user' %>
+                      </div>                  
+                  <% else %>
+                      <%= link_to t('application.application.log_in') ,new_user_session_path, class: :nav__btn %>
+                      <%= link_to t('application.application.sign_up') , new_user_registration_path, class: :nav__btn %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <%= yield %>
+        <%# <footer class="footer">
+          <p class="copyright">Copyright © PROTO SPACE All rights reserved.</p>
+        </footer> %>
+      <!--/wrapper--></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-8/js/5-8.js"></script>
+  </body>
+</html>

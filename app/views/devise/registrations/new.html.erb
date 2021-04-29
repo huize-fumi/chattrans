@@ -1,0 +1,37 @@
+
+<%= form_with model: @user, url: user_registration_path , local: true do |f| %>
+<div class="devise">
+  <div class="devise-form">
+    <%= link_to t('application.application.user_registration') %>
+  </div>
+
+  <%=  render 'devise/shared/error_messages', model: f.object %>
+    
+      <div class="regi-form">
+        <div class="regi-form-left">
+          <div class="regi-form-left_content">
+            <%= link_to t('application.application.email')%><br /><br />
+            <%= link_to t('application.application.password')%><br /><br />
+            <%= link_to t('application.application.password_confirmation')%><br /><br />
+            <%= link_to t('application.application.name')%><br /><br />
+            <%= link_to t('application.application.post')%><br /><br />        
+          </div>
+        </div>
+        
+        <div class="regi-form-right">
+          <div class="regi-form-right_content">
+            <%= f.email_field :email, class: :form__text, id:"user_email", autofocus: true, autocomplete: "email"%><br /><br /> 
+            <%= f.password_field :password, class: :form__text, id:"user_password",autocomplete: "new-password"%><br /><br /> 
+            <%= f.password_field :password_confirmation, class: :form__text, id:"user_password_confirmation", autocomplete: "new-password"%><br /><br /> 
+            <%= f.text_field :name, class: :form__text, id:"user_name"%><br /><br /> 
+            <%= f.text_field :post, class: :form__text, id:"user_post"%><br /><br /> 
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <%# <%= form_with model: @user, url: user_registration_path ,local: true do |f| %>
+          <%= f.submit "#{t('application.application.registration')}" ,class: :form__btn  %><br/>
+      </div>
+  <%# <%end%> 
+</div>
+<%end%>

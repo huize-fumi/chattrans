@@ -1,0 +1,33 @@
+<div class="devise">
+  <div class="devise-form">
+    <%= link_to t('application.application.log_in')%>
+  </div>
+  <%= form_with model: @user ,url: new_user_session_path, local: true  do |f| %>
+  <%  render 'devise/shared/error_messages', model: f.object %>
+    <div class="regi-form">
+      <div class="regi-form-left">
+        <div class="regi-form-left_content">
+          <%= link_to t('application.application.email') %><br/><br/>
+          <%= link_to t('application.application.password')%><br/><br/>
+        </div>
+      </div>
+      <div class="regi-form-right">
+        <div class="regi-form-right_content">    
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %><br/><br/>
+          <%= f.password_field :password, autocomplete: "current-password" %><br/><br/>
+        </div>
+      </div>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= link_to t('application.application.Remember_me' )%>
+    </div>
+    <% end %>
+    
+    <div class="actions">
+      <%= button_tag "#{t('application.application.log_in')}" %>
+    </div>
+  <% end %>
+</div>

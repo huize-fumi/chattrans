@@ -1,0 +1,71 @@
+<div calss='chat-room-form'>
+  <div class='chat-room-form_top'>
+    <h1><%= link_to t('application.application.chat_room')%></h1>
+    <div class='chat-room-back'>
+    <%= form_with model: @room, local: true do |f| %>
+    
+      <%= render 'devise/shared/error_messages', model: f.object %>
+
+      <div class='chat-room-form_field'>
+        <div class='chat-room-label_field'>
+          <%= link_to t('application.application.room_name') %>
+        </div>
+        <div class='chat-room-name'>
+          <%= f.text_field :title, class: 'chat-room-name_fill', placeholder:"#{t('application.application.fill_in')}"%>
+        </div> 
+      </div>
+
+      <div class='chat-room-center'>
+        <div class ='chat-room-center_select'>
+          <div class='chat-room-center_select_post'>
+            <%= link_to t('application.application.post')%>
+          </div>
+          <div class='chat-room-center_select_post'>        
+            <%= link_to t('application.application.email')%>
+          </div>
+        </div>
+        <div class = 'chat-room-center_fill'>
+          <div id="input_pluralBox">
+            <div id="input_plural">
+              <input type="button" value="＋" class="add pluralBtn">
+              <input type="button" value="－" class="del pluralBtn">
+
+              <select post="room[user_ids][]" class='room-user-select'>
+                <%# <div class="room-user-select"> %>
+                  <option value=""><%=link_to t('application.application.select_post')%></option>
+                  <% User.where.not(id: current_user.id).each do |user| %>
+                    <option value=<% user.id%>%><%= user.post%></option>
+                  <% end %>
+                <%# </div> %>
+              </select>
+              <select name="room[user_ids][]" class='room-user-select'>
+                <option value=""><%=link_to t('application.application.select_name')%></option>
+                <% User.where.not(id: current_user.id).each do |user| %>
+                  <option value=<%= user.id %>><%= user.name %></option>
+                <% end %>
+              </select>
+
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+              <script type="text/javascript">
+                $(document).on("click", ".add", function() {
+                $(this).parent().clone(true).insertAfter($(this).parent());
+                });
+                $(document).on("click", ".del", function() {
+                var target = $(this).parent();
+                if (target.parent().children().length > 1) {
+                target.remove();
+                    }
+                });
+              </script>
+            </div>
+            <input name="room[user_ids][]" type="hidden" value=<%= current_user.id%>>
+          </div>
+        </div>
+        <div class = 'chat-room_action_btn_form'>
+          <%= f.submit "#{t('application.application.create')}",class: 'chat-room-action_btn'%>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>

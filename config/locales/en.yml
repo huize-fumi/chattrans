@@ -1,0 +1,122 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  # hello: "Hello world"
+  application:
+    application:
+      user_registration: "User registration"
+      password: "Password(More than 6 character)"
+      password_confirmation: "Password confirmation"
+      name: "Name"
+      post: "Post"      
+      log_out: "Log out"
+      chat_room: "Chat room making"
+      chat_room_list: "Chat room list"
+      sign_up: "Sign up"
+      log_in: "Log in"
+      Remember_me: "Remember me"
+      email: "Email address"
+      room_name: "Room name"
+      fill_in: "Please fill in a chat room name"
+      select_pst: "Please select a post"
+      select_name: "Please select a name"
+      subject: "Subject"
+      send: "Send"
+      image: "Image"
+      type: "type a message"
+      finish_a_chat: "Finish a chat"
+      create: "Create"
+      back_to_the_list: "Back to the list"
+      translation: "Translation"
+      registration: "Registration"
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
+
+
+ja:
+  application: #applicationコントローラーの
+    application: #applicationのview
+      user_registration: "ユーザー登録"
+      password: "パスワード(6文字以上)"
+      password_confirmation: "パスワード再入力"
+      name: "名前"
+      post: "部署"
+      log_out: "ログアウト"
+      chat_room: "チャットルーム作成"
+      chat_room_list: "チャットルーム一覧"
+      sign_up: "新規登録"
+      log_in: "ログイン"
+      Remember_me: "保存の状態を保持する"
+      email: "メールアドレス"
+      room_name: "ルーム名"
+      fill_in: "チャットルーム名を記入してください"
+      select_post: "部署を選んでください"
+      select_name: "名前を選んでください"
+      subject: "件名" 
+      send: "送信"
+      image: "画像"
+      type: "メッセージを入力してください"
+      finish_a_chat: "チャットを終了する"
+      create: "作成する"
+      back_to_the_list: "一覧へ戻る"
+      translation: "翻訳"
+      registration: "登録"      
+
+zh_CN:
+  application: #applicationコントローラーの
+    application: #applicationのview
+      user_registration: "用户登记"
+      password: "密码(6文字以上)"
+      password_confirmation: "密码再入力"
+      name: "名字"
+      post: "部门"
+      log_out: "登出"
+      chat_room: "聊天室制作"
+      chat_room_list: "聊天室一览"
+      sign_up: "新的登录"
+      log_in: "登录"
+      Remember_me: "保持保存的状态"
+      email: "邮件地址"
+      room_name: "房间名"
+      fill_in: "请填写聊天室名"
+      select_post: "请选部门"
+      select_name: "请选名字"
+      subject: "题目" 
+      send: "送信"
+      image: "图片"
+      type: "请输入留言"
+      finish_a_chat: "结束闲聊"
+      create: "创造"
+      back_to_the_list: "回到清单"
+      translation: "翻译"
+      registration: "登录"

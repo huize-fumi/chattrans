@@ -1,0 +1,27 @@
+<div class='account-page' id='account-page'>
+  <div class='account-page__inner clearfix'>
+    <div class='account-page__inner--right user-form'>
+      <%= form_with model: current_user, local: true do |f|%>
+        <div class='field'>
+          <div class="field">
+            <%= f.label :email, "メールアドレス"%><br />
+            <%= f.email_field :email, id:"user_email", autofocus: true, autocomplete: "email" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :name, "名前"%><br />
+            <%= f.text_field :name, id:"user_name"%>
+          </div>
+
+          <div class="field">
+            <%= f.label :post, "部署" %><br />
+            <%= f.text_field :post, class: :form__text, id:"user_post" %>
+          </div>
+        </div>
+        <div class='actions'>
+          <%= f.submit "Update", class: 'btn'%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
