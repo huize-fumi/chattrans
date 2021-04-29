@@ -1,8 +1,6 @@
 .room-index-lower{
   width: 100%;
   height: 450px;
-  /* background-color: lightcyan; */
-  /* overflow:scroll; */
   display:flex;
   flex-wrap:wrap;
   justify-content: center;

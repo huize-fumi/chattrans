@@ -44,7 +44,6 @@ a {
 
 .regi-form{
   display:flex;
-  /* justify-content: center; */
 }
 
 .regi-form-left{
@@ -85,7 +84,6 @@ a {
 .nav {
   width: 100%;
   display: flex;
-  /* justify-content: space-between; */
 }
 .logo {
   width: 100px;
@@ -99,7 +97,6 @@ a {
 .nav_center{
   display: inline-block;
   justify-content: center;
-  /* flex-direction: column; */
   width:500px;
 }
 
@@ -108,7 +105,6 @@ a {
   height:70px;
   display:flex;
   justify-content: center;
-  /* margin-left:280px; */
 }
 
 .nav_center_ja{
@@ -143,7 +139,6 @@ a {
 .nav_letter{
   width:70px;
   height:70px;
-  /* border:2px solid blue; */
   position:absolute;
   text-align: center;
   padding-top:45px;
@@ -157,7 +152,6 @@ a {
   display: flex;
   float: right;
   display:inline-block;
-  /* justify-content: */
 }
 
 .nav_right_sub{
@@ -177,7 +171,6 @@ a {
 .nav__btn{
   display: inline-block;
   padding:5px;
-  /* padding: 0.4em 1.6em; */
   font-size: 0.8em;
   color: #87CEFA;
   text-decoration: none;
