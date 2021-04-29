@@ -110,7 +110,6 @@
 .main_bar_top_right{
   padding-right:40px;
   width:500px;
-
 }
 
 .chat-btn-form{
@@ -123,9 +122,6 @@
   width:170px;
   padding:10px;
   text-align: center;
-
-
-
 }
 
 .main_bar_middle{
@@ -151,18 +147,15 @@
 }
 
 .message-user{
-
   width:150px;
   text-align: right;
 }
 
 .message-date{
-
   color:darkolivegreen;
 }
 
 .message{
-
 }
 
 .message-content{

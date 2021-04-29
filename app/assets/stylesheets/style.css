@@ -75,7 +75,6 @@ a {
   /* background-color: #f1f8fe; */
   /* margin-bottom: 48px; */
   padding: 20px 0;
-
 }
 .inner {
   width: 100%;
@@ -92,7 +91,6 @@ a {
 .nav__left{
   width:400px;
   margin-left: 50px;
-
 }
 .nav_center{
   display: inline-block;
@@ -155,7 +153,6 @@ a {
 }
 
 .nav_right_sub{
-
 }
 
 .nav_right_current_user{
@@ -234,7 +231,6 @@ a {
   transition: 0.2s ease;
   width:150px;
   height:30px;
-  
 }
 
 
