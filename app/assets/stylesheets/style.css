@@ -157,7 +157,7 @@ a {
   display: flex;
   float: right;
   display:inline-block;
-  justify-content:
+  /* justify-content: */
 }
 
 .nav_right_sub{
